@@ -1,20 +1,18 @@
 import { BiPauseCircle } from "react-icons/bi";
 import { HiOutlinePause, HiOutlinePlay } from "react-icons/hi2";
 import { GrPowerReset } from "react-icons/gr";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import TimerContext from "../Context";
 export default function Body() {
 	const [isPause, setIsPause] = useState(true);
-	const [whiteMins, setWhiteMins] = useState(null);
-	const [blackMins, setBlackMins] = useState(null);
-	const [whiteSecs, setWhiteSecs] = useState(null);
-	const [blackSecs, setBlackSecs] = useState(null);
-
+	const { whiteMins, blackMins, whiteSecs, blackSecs } =
+		useContext(TimerContext);
 	return (
-		<div className="flex flex-col items-center gap-3 ">
-			<h1>Timer</h1>
+		<div className="min-h-screen flex flex-col items-center justify-center gap-3 ">
+			<h1 className="text-3xl font-semibold">Timer</h1>
 			<div className="border">
 				<h2>White</h2>
-				<h3>00:00:00</h3>
+				<h3>{whiteMins + " : " + whiteSecs}</h3>
 			</div>
 			<div className="flex gap-3 justify-center items-center">
 				<button onClick={() => setIsPause(!isPause)}>
@@ -24,11 +22,13 @@ export default function Body() {
 						<HiOutlinePause size={25} />
 					)}
 				</button>
-				<GrPowerReset size={22} />
+				<button>
+					<GrPowerReset size={22} />
+				</button>
 			</div>
 			<div className="border">
 				<h2>Black</h2>
-				<h3>00:00:00</h3>
+				<h3>{blackMins + " : " + blackSecs}</h3>
 			</div>
 		</div>
 	);
