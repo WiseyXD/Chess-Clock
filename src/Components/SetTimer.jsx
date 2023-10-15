@@ -21,7 +21,7 @@ export default function SetTimer() {
 					placeholder="Minutes"
 					min="0"
 					max="59"
-					onChange={(e) => setWhiteMins(e.target.value)}
+					onChange={(e) => setWhiteMins(parseInt(e.target.value))}
 				/>
 				<input
 					id="seconds"
@@ -29,7 +29,7 @@ export default function SetTimer() {
 					placeholder="Seconds"
 					min="0"
 					max="59"
-					onChange={(e) => setWhiteSecs(e.target.value)}
+					onChange={(e) => setWhiteSecs(parseInt(e.target.value))}
 				/>
 			</div>
 			<div className="flex gap-3">
@@ -41,7 +41,7 @@ export default function SetTimer() {
 					placeholder="Minutes"
 					min="0"
 					max="59"
-					onChange={(e) => setBlackMins(e.target.value)}
+					onChange={(e) => setBlackMins(parseInt(e.target.value))}
 				/>
 				<input
 					id="seconds"
@@ -49,7 +49,7 @@ export default function SetTimer() {
 					placeholder="Seconds"
 					min="0"
 					max="59"
-					onChange={(e) => setBlackSecs(e.target.value)}
+					onChange={(e) => setBlackSecs(parseInt(e.target.value))}
 				/>
 			</div>
 			<div>

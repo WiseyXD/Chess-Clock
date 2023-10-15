@@ -8,10 +8,10 @@ import SetTimer from "./Components/SetTimer";
 import { Route, Routes } from "react-router-dom";
 import TimerContext from "./Context";
 function App() {
-	const [whiteMins, setWhiteMins] = useState(0);
-	const [blackMins, setBlackMins] = useState(0);
-	const [whiteSecs, setWhiteSecs] = useState(0);
-	const [blackSecs, setBlackSecs] = useState(0);
+	const [whiteMins, setWhiteMins] = useState(null);
+	const [blackMins, setBlackMins] = useState(null);
+	const [whiteSecs, setWhiteSecs] = useState(null);
+	const [blackSecs, setBlackSecs] = useState(null);
 
 	return (
 		<>
