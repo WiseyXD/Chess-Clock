@@ -8,6 +8,7 @@ import SetTimer from "./Components/SetTimer";
 import { Route, Routes } from "react-router-dom";
 import TimerContext from "./Context";
 function App() {
+	// WSL Added
 	const [whiteMins, setWhiteMins] = useState(null);
 	const [blackMins, setBlackMins] = useState(null);
 	const [whiteSecs, setWhiteSecs] = useState(null);
